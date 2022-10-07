@@ -1,0 +1,157 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --opaque-cyan: hsla(178, 100%, 50%, 0.5);
+  --main-bg-blue: hsl(217, 54%, 11%);
+  --card-bg-blue: hsl(216, 50%, 16%);
+  --line-blue: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --font-size: 18px;
+  --small-font-size: calc(0.9 * 18px);
+  --font-family: 'Outfit', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  color: var(--soft-blue);
+  height: 100vh;
+  background-color: var(--main-bg-blue);
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__container {
+  width: 360px;
+  height: 620px;
+  background-color: var(--card-bg-blue);
+  padding: calc(1.4 * var(--font-size));
+  border-radius: 20px;
+}
+
+.card__image-link {
+  position: relative;
+}
+
+.card__image-link:hover::before {
+  content: url(./images/icon-view.svg);
+  width: 100%;
+  height: 100%;
+  background-color: var(--opaque-cyan);
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+.card__image {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white)
+}
+
+a:hover {
+  color: var(--cyan);
+}
+
+.card__content {
+  height: 40%;
+  margin-top: calc(1.4 * var(--font-size));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: calc(1.2 * var(--font-size));
+  font-weight: 600;
+}
+
+.blurb {
+  font-weight: 300;
+  font-size: var(--small-font-size);
+  line-height: 1.75rem;
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--small-font-size);
+}
+
+.card__price,
+.card__purchase-deadline {
+  display: flex;
+  align-items: center;
+}
+
+.card__price img,
+.card__purchase-deadline img {
+  margin-right: 6px;
+}
+
+.card__price {
+  color: var(--cyan);
+}
+
+.line-break {
+  background-color: var(--line-blue);
+  width: 100%;
+  height: 1px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+}
+
+.author__image {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.author__link {
+  font-size: var(--small-font-size);
+  font-weight: 300;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+footer {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+}
