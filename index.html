@@ -9,14 +9,12 @@
 			rel="icon"
 			type="image/png"
 			sizes="32x32"
-			href="./images/favicon-32x32.png"
-		/>
+			href="./images/favicon-32x32.png" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
-			rel="stylesheet"
-		/>
+			rel="stylesheet" />
 		<link rel="stylesheet" href="./styles.css" />
 
 		<title>Frontend Mentor | NFT preview card component</title>
@@ -32,45 +30,44 @@
 	</head>
 	<body>
 		<main>
-			<article class="card__container">
+			<article class="card">
 				<a href="#" rel="noopener noreferrer" class="card__image-link">
 					<img
 						class="card__image"
 						src="./images/image-equilibrium.jpg"
-						alt="Balancing cube on its edge illustration"
-					/>
-					<p class="sr-only">Image link to NFT</p>
+						alt="Balancing cube on its edge illustration" />
+					<span class="visually-hidden">Image link to NFT</span>
 				</a>
 
-				<div class="card__content">
-					<a href="#" rel="noopener noreferrer"
-						><h2 class="title">Equilibrium #3429</h2></a
-					>
-					<p class="blurb">
-						Our Equilibrium collection promotes balance and calm.
-					</p>
-					<div class="card__info">
-						<div class="card__price">
-							<img src="./images/icon-ethereum.svg" alt="Ethereum icon" />
-							<span>0.041 ETH</span>
-						</div>
-						<div class="card__purchase-deadline">
-							<img src="./images/icon-clock.svg" alt="clock icon" />
-							<span>3 days left</span>
-						</div>
+				<a href="#" rel="noopener noreferrer" class="card__link"
+					><h2 class="title">Equilibrium #3429</h2></a
+				>
+				<p class="card__description">
+					Our Equilibrium collection promotes balance and calm.
+				</p>
+				<div class="card__info">
+					<div class="card__price">
+						<img src="./images/icon-ethereum.svg" alt="Ethereum icon" />
+						<span>0.041 ETH</span>
 					</div>
+					<div class="card__deadline">
+						<img src="./images/icon-clock.svg" alt="clock icon" />
+						<span>3 days left</span>
+					</div>
+				</div>
 
-					<div class="line-break"></div>
-					<div class="author">
-						<img
-							src="./images/image-avatar.png"
-							alt="Author"
-							class="author__image"
-						/>
-						<p class="author__link">
-							Creation of <a href="#" rel="noopener noreferrer">Jules Wyvern</a>
-						</p>
-					</div>
+				<div class="line-break"></div>
+				<div class="author">
+					<img
+						src="./images/image-avatar.png"
+						alt="Author"
+						class="author__image" />
+					<p class="author__link">
+						Creation of
+						<a href="#" rel="noopener noreferrer" class="card__link"
+							>Jules Wyvern</a
+						>
+					</p>
 				</div>
 			</article>
 		</main>
